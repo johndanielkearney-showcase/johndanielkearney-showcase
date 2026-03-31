@@ -16,56 +16,66 @@
 
 ---
 
-### Research focus
+### What I work on
 
-I study how adversarial security methodology applies to AI alignment and
-agent safety. My central claim is that misaligned AI behavior maps onto
-established threat models — the same kill chains, evasion techniques, and
-detection gaps that offensive security has catalogued for decades reappear in
-agentic systems, and the safety community is underusing these frameworks.
+I look at AI alignment through the lens of offensive security. The same
+kill chains, evasion techniques, and detection gaps that security teams
+have dealt with for decades keep showing up in agentic AI systems, and
+the safety community isn't making enough use of that overlap.
 
-This isn't metaphor. I'm building the formal mappings, the evaluation tools,
-and the runtime safety infrastructure to make the connection operational.
+I'm building the mappings, tooling, and runtime infrastructure to close
+that gap.
 
-I maintain two GitHub organizations:
-**[AUTHENSOR](https://github.com/AUTHENSOR)** — an open-source agent safety
-stack (47K+ LoC, 1,300+ tests, 16 packages), and
-**[15 Research Lab](https://github.com/15-Research-Lab)** — AI security
-benchmarks, adversarial datasets, and research papers (7+ repos).
+I run two GitHub orgs:
+**[AUTHENSOR](https://github.com/AUTHENSOR)** (open-source agent safety
+stack, 47K+ LoC, 1,300+ tests, 16 packages) and
+**[15 Research Lab](https://github.com/15-Research-Lab)** (AI security
+benchmarks, adversarial datasets, research papers, 7+ repos).
 
-**Actively seeking PhD positions in AI safety, alignment, and trustworthy
-autonomous systems for Fall 2027.**
+**Looking for PhD positions in AI safety/alignment for Fall 2027.**
 
 ---
 
-### Research output
+### Pre-prints
+
+| Paper | DOI |
+|:---|:---|
+| **The Verbosity Premium: What RLHF-Induced Token Inflation Costs the AI Industry** | [10.5281/zenodo.19346709](https://zenodo.org/records/19346709) |
+| **Grokking Has Finite Capacity: Measuring and Overcoming Limits on Simultaneous Algorithmic Discovery** | [10.5281/zenodo.19346536](https://zenodo.org/records/19346536) |
+| **Side-Channel Exfiltration and Narrative Erosion in Frontier Language Models** | [10.5281/zenodo.19346069](https://zenodo.org/records/19346069) |
+
+All through [15 Research Lab](https://github.com/15-Research-Lab).
+
+---
+
+### Projects
 
 <table>
 <tr><td width="50%" valign="top">
 
 **Mapping Security Frameworks to Alignment**
-- [ATT&CK to Alignment Rosetta Stone](https://github.com/15-Research-Lab/attack-alignment-rosetta): Bidirectional mapping of all 14 MITRE ATT&CK tactics to AI alignment failure modes. Includes 20 technique-level cross-references, an ATLAS bridge layer, and OWASP Agentic Top 10 integration.
-- [Hawthorne Protocol](https://github.com/AUTHENSOR/hawthorne-protocol): Study of evaluation integrity in AI systems — whether agents can detect benchmarking contexts and the implications for safety testing. Reference detector (22 indicators, 5 categories) with countermeasure implementations.
+- [ATT&CK to Alignment Rosetta Stone](https://github.com/15-Research-Lab/attack-alignment-rosetta): Bidirectional mapping of all 14 MITRE ATT&CK tactics to alignment failure modes. 20 technique-level cross-references, ATLAS bridge layer, OWASP Agentic Top 10 integration.
+- [Hawthorne Protocol](https://github.com/AUTHENSOR/hawthorne-protocol): Can agents detect when they're being benchmarked? Study of evaluation integrity with a reference detector (22 indicators, 5 categories) and countermeasures.
 
 </td><td width="50%" valign="top">
 
 **Adversarial Evaluation**
-- [Prompt Injection Benchmark](https://github.com/AUTHENSOR/prompt-injection-benchmark): 240 scored test cases across 7 threat categories. Pluggable scanner adapter interface for standardized comparison of safety tools.
-- [AI SecLists](https://github.com/AUTHENSOR/ai-seclists): 2,000+ attack payloads organized into 10 categories (prompt injection, jailbreaks, memory poisoning, exfiltration, tool abuse). Encoding utilities for 18 formats and 10 mutation types.
-- [Chainbreaker](https://github.com/AUTHENSOR/chainbreaker): Automated red-team harness for running structured attack campaigns against agent guardrails.
+- [Prompt Injection Benchmark](https://github.com/AUTHENSOR/prompt-injection-benchmark): 240 scored test cases across 7 threat categories. Pluggable scanner adapters for comparing safety tools.
+- [AI SecLists](https://github.com/AUTHENSOR/ai-seclists): 2,000+ attack payloads in 10 categories (prompt injection, jailbreaks, memory poisoning, exfiltration, tool abuse). Encoding utilities for 18 formats and 10 mutation types.
+- [Chainbreaker](https://github.com/AUTHENSOR/chainbreaker): Red-team harness for running structured attack campaigns against agent guardrails.
 
 </td></tr>
 <tr><td width="50%" valign="top">
 
 **Agent Safety Infrastructure (AUTHENSOR)**
-- [Authensor](https://github.com/AUTHENSOR/AUTHENSOR): Runtime agent safety stack — synchronous policy engine (zero dependencies), Aegis content scanner (210+ rules), Sentinel behavioral monitor (EWMA/CUSUM), MCP gateway, approval workflows, and SHA-256 hash-chained audit receipts. TypeScript and Python SDKs, 8 framework adapters, 10/10 OWASP Agentic coverage. MIT licensed.
+- [Authensor](https://github.com/AUTHENSOR/AUTHENSOR): Runtime agent safety stack. Synchronous policy engine (zero deps), Aegis content scanner (210+ rules), Sentinel behavioral monitor (EWMA/CUSUM), MCP gateway, approval workflows, SHA-256 hash-chained audit receipts. TS and Python SDKs, 8 framework adapters, 10/10 OWASP Agentic coverage. MIT licensed.
 
 </td><td width="50%" valign="top">
 
 **Post-Hoc Analysis**
-- [Attack Surface Mapper](https://github.com/AUTHENSOR/attack-surface-mapper): Static analyzer for AI agent configurations. Enumerates tool capabilities, detects dangerous permission combinations, maps to OWASP Agentic Top 10, outputs SARIF for GitHub Security integration.
-- [Agent Forensics](https://github.com/AUTHENSOR/agent-forensics): Reconstructs decision trees from cryptographic receipt chains. Identifies 6 anomaly types with Mermaid visualizations.
-- [Behavioral Fingerprinting](https://github.com/AUTHENSOR/behavioral-fingerprinting): Per-agent statistical profiles across 8 behavioral dimensions with real-time drift detection (EWMA/CUSUM).
+- [Attack Surface Mapper](https://github.com/AUTHENSOR/attack-surface-mapper): Static analyzer for AI agent configs. Finds dangerous permission combos, maps to OWASP Agentic Top 10, outputs SARIF for GitHub Security.
+- [Agent Forensics](https://github.com/AUTHENSOR/agent-forensics): Reconstructs decision trees from cryptographic receipt chains. 6 anomaly types, Mermaid visualizations.
+- [Behavioral Fingerprinting](https://github.com/AUTHENSOR/behavioral-fingerprinting): Per-agent statistical profiles across 8 behavioral dimensions with drift detection (EWMA/CUSUM).
 
 </td></tr>
 </table>
@@ -79,7 +89,7 @@ autonomous systems for Fall 2027.**
 
 **Adversarial Alignment**
 - Modeling misalignment as a progressive threat actor through kill chain stages
-- Formal mappings between cybersecurity frameworks (ATT&CK, ATLAS) and alignment failure taxonomies
+- Formal mappings between security frameworks (ATT&CK, ATLAS) and alignment failure taxonomies
 - Evaluation-awareness and benchmark gaming in frontier models
 - Anti-forensics behaviors in autonomous agents
 
@@ -98,14 +108,14 @@ autonomous systems for Fall 2027.**
 
 ### Background
 
-Professional penetration tester applying offensive security methodology to AI
-systems. My research approach treats AI safety evaluation as an adversarial
-discipline — building on the same structured red-teaming, threat modeling, and
-failure analysis that security engineering has refined over decades.
+I come from inventory database systems and penetration testing. That
+background shapes how I think about AI safety: structured red-teaming,
+threat modeling, and failure analysis applied to alignment and agent
+control problems.
 
-I also maintain a proprietary data infrastructure (30 automated collectors,
-~3M records/month across prediction markets, DeFi, BGP, DNS, and other
-domains) used for cross-domain signal research.
+I also run a proprietary data pipeline (30 automated collectors, ~3M
+records/month across prediction markets, DeFi, BGP, DNS, and other
+domains) for cross-domain signal research.
 
 ---
 
@@ -114,7 +124,7 @@ domains) used for cross-domain signal research.
 | Org / Account | Focus | Scale |
 |:---|:---|:---|
 | **[AUTHENSOR](https://github.com/AUTHENSOR)** | Open-source agent safety stack | 47K LoC · 1,300+ tests · 16 packages · TS + Python SDKs |
-| **[15 Research Lab](https://github.com/15-Research-Lab)** | AI security research and adversarial evaluation | 7+ repos · 2 papers · 2,000+ attack payloads · 240 benchmark cases |
+| **[15 Research Lab](https://github.com/15-Research-Lab)** | AI security research and adversarial evaluation | 7+ repos · 3 pre-prints · 2,000+ attack payloads · 240 benchmark cases |
 
 ---
 
