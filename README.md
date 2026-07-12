@@ -32,7 +32,6 @@ stack, 47K+ LoC, 1,300+ tests, 16 packages) and
 **[15 Research Lab](https://github.com/15-Research-Lab)** (AI security
 benchmarks, adversarial datasets, research papers, 7+ repos).
 
-**Looking for PhD positions in AI safety/alignment for Fall 2027.**
 
 ---
 
